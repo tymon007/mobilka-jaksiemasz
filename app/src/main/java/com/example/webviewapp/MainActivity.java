@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         WebView WebView1 = (WebView) findViewById(R.id.WebView1);
         WebView1.setWebViewClient(new WebViewClient());
-        //WebView1.loadUrl("http://31.183.0.134:8000");
         WebSettings webSettings = WebView1.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
+        webSettings.setLoadWithOverviewMode(true);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
         webSettings.setBuiltInZoomControls(true);
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setAppCachePath( getApplicationContext().getCacheDir().getAbsolutePath() );
         webSettings.setAllowFileAccess( true );
         webSettings.setAppCacheEnabled( true );
-        webSettings.setCacheMode( WebSettings.LOAD_DEFAULT ); // load online by default
+        webSettings.setCacheMode( WebSettings.LOAD_DEFAULT );
 
         if ( !isNetworkAvailable()) { // loading offline
             Toast.makeText(MainActivity.this, "Nie można połączyć z serwerem. Zostanie wyświetlona najbardziej aktualna wersja, pobrana na urządzeniu.", Toast.LENGTH_LONG).show();
             webSettings.setCacheMode( WebSettings.LOAD_CACHE_ELSE_NETWORK );
         }
-        WebView1.loadUrl( "http://192.168.1.196:8000" );
+        WebView1.loadUrl( "http://31.183.0.134:8000" );
 
 
     }
