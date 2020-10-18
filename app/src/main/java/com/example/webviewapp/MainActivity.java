@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
-        webSettings.setBuiltInZoomControls(true);
-        webSettings.setDisplayZoomControls(false);
-        webSettings.setSupportZoom(true);
+        //webSettings.setBuiltInZoomControls(true);
+        //webSettings.setDisplayZoomControls(false);
+        //webSettings.setSupportZoom(true);
         webSettings.setDefaultTextEncodingName("utf-8");
         webSettings.setAppCacheMaxSize( 100 * 1024 * 1024 );
         webSettings.setAppCachePath( getApplicationContext().getCacheDir().getAbsolutePath() );
