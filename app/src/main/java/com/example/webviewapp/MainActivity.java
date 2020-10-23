@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setAppCacheEnabled( true );
         webSettings.setCacheMode( WebSettings.LOAD_DEFAULT );
 
-        if ( !isNetworkAvailable()) { // loading offline
+        if ( !isNetworkAvailable()) { 
             Toast.makeText(MainActivity.this, "Nie można połączyć z serwerem. Zostanie wyświetlona najbardziej aktualna wersja, pobrana na urządzeniu.", Toast.LENGTH_LONG).show();
             webSettings.setCacheMode( WebSettings.LOAD_CACHE_ELSE_NETWORK );
         }
